@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-text-color: #ddd;
+  --highlight-text-color: #baa294;
+  --main-bg-color: #171717;
+  --hover-text-color: #fff;
+}
+
+body {
+  color: var(--main-text-color);
+}
+#home-carousel {
+  scrollbar-color: #000;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.bg-colors {
+  background-color: var(--main-bg-color);
+}
+
+.text-highlight-colors {
+  color: var(--highlight-text-color);
+}
