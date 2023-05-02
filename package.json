@@ -20,8 +20,6 @@
     "mongoose": "^7.0.2"
   },
   "scripts": {
-    "run all": "concurrently \"npm run client\" \"npm run server\"",
-    "server": "cd server && nodemon server.js",
     "client": "react-scripts start",
     "build": "react-scripts build"
   },
