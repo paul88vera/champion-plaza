@@ -23,12 +23,15 @@ export default function Invest() {
   ];
   const [image, setImage] = useState(images[0]);
 
+  function nextImage() {
+    const currentIndex = images.indexOf(image);
+    const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+    setImage(images[nextIndex]);
+  }
+
   useEffect(() => {
     const timer = setInterval(() => {
-      const currentIndex = images.indexOf(image);
-      const nextIndex =
-        currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-      setImage(images[nextIndex]);
+      nextImage();
     }, 6000);
 
     return () => {
@@ -56,13 +59,16 @@ export default function Invest() {
         <br />
         <Link
           to="https://portal.cbc.global/default.aspx?page=3522"
-          className="text-colors underline text-2xl lg:text-3xl hover:text-[#f0453e]"
+          className="text-colors underline text-2xl lg:text-3xl hover:text-[#f0453e] hover:animate-pulse"
         >
           Invest in Champion Plaza
         </Link>
       </div>
-      <div className="justify-center lg:w-screen">
-        <img src={image} alt="Champion Plaza" />
+      <div
+        className="justify-center lg:w-screen hover:cursor-pointer"
+        draggable="false"
+      >
+        <img src={image} alt="Champion Plaza" onClick={nextImage} />
       </div>
     </div>
   );

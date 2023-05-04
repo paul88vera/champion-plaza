@@ -1,3 +1,5 @@
+/* NOTE: the top three `@tailwind` need to stay and will unlink all the tailwindcss. `bg-colors` and `text-highlight-colors` are used throughout the project. if you delete them many elements will lose their colors */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +11,25 @@
   --hover-text-color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--main-bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-text-color);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-bg-color);
+}
+
 body {
   color: var(--main-text-color);
+  opacity: 0.96;
+  background-image: radial-gradient(#baa29435 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 #home-carousel {
   scrollbar-color: #000;

@@ -23,7 +23,7 @@ export default function Navbar() {
         to="/"
         className="flex flex-row gap-4 items-center align-center -ml-4 sm:ml-4"
       >
-        <span className="align-bottom tracking-wide text-xs sm:text-lg hover:text-[#f0453e]">
+        <span className="align-bottom tracking-wide text-xs sm:text-lg hover:text-[#f0453e] hover:animate-pulse">
           COMMUNITY BIBLE CHURCH
         </span>
       </Link>
@@ -32,10 +32,16 @@ export default function Navbar() {
         id="not-burgewr"
         className="cursor-pointer fixed items-align right-4 md:right-10 hidden sm:flex"
       >
-        <Link to="/" className="burger-menu px-4 hover:text-[#f0453e]">
+        <Link
+          to="/"
+          className="burger-menu px-4 hover:text-[#f0453e] hover:animate-pulse"
+        >
           HOME
         </Link>
-        <Link to="/News" className="burger-menu px-4 hover:text-[#f0453e]">
+        <Link
+          to="/News"
+          className="burger-menu px-4 hover:text-[#f0453e] hover:animate-pulse"
+        >
           NEWS
         </Link>
       </div>
@@ -71,22 +77,22 @@ export default function Navbar() {
             </Link>
             <ul className="flex flex-row md:flex-row place-content-center gap-4 lg:gap-10 py-10 pb-4 items-center">
               <li>
-                <Link to="/">
+                <Link to="https://www.facebook.com/cbcsocial/">
                   <SiFacebook className="text-3xl text-[#baa294] hover:text-[#f0453e] hover:scale-110 transition" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="https://www.instagram.com/cbcsocial">
                   <AiFillInstagram className="text-4xl text-[#baa294] hover:text-[#f0453e] hover:scale-110 transition" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="https://www.youtube.com/channel/UCm2bTbosRvfyDNVb09vMcnA">
                   <TiSocialYoutubeCircular className="text-4xl text-[#baa294] hover:text-[#f0453e] hover:scale-110 transition" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="https://communitybiblechurch.vhx.tv/browse">
                   <TiSocialVimeoCircular className="text-4xl text-[#baa294] hover:text-[#f0453e] hover:scale-110 transition" />
                 </Link>
               </li>

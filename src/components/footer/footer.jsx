@@ -12,22 +12,22 @@ export default function Footer() {
           <ul className="flex flex-row md:flex-row place-content-center gap-10 pb-4 items-center">
             <li>
               <Link to="https://www.facebook.com/cbcsocial/">
-                <SiFacebook className="text-3xl text-[#baa294] hover:scale-110 transition" />
+                <SiFacebook className="text-3xl text-[#baa294] hover:scale-110 transition hover:animate-pulse hover:text-[#f0453e]" />
               </Link>
             </li>
             <li>
               <Link to="https://www.instagram.com/cbcsocial">
-                <AiFillInstagram className="text-4xl text-[#baa294] hover:scale-110 transition" />
+                <AiFillInstagram className="text-4xl text-[#baa294] hover:scale-110 transition hover:animate-pulse hover:text-[#f0453e]" />
               </Link>
             </li>
             <li>
               <Link to="https://www.youtube.com/channel/UCm2bTbosRvfyDNVb09vMcnA">
-                <TiSocialYoutubeCircular className="text-4xl text-[#baa294] hover:scale-110 transition" />
+                <TiSocialYoutubeCircular className="text-4xl text-[#baa294] hover:scale-110 transition hover:animate-pulse hover:text-[#f0453e]" />
               </Link>
             </li>
             <li>
               <Link to="https://communitybiblechurch.vhx.tv/browse">
-                <TiSocialVimeoCircular className="text-4xl text-[#baa294] hover:scale-110 transition" />
+                <TiSocialVimeoCircular className="text-4xl text-[#baa294] hover:scale-110 transition hover:animate-pulse hover:text-[#f0453e]" />
               </Link>
             </li>
           </ul>
@@ -36,7 +36,7 @@ export default function Footer() {
           All Rights Reserved © 2023 |{" "}
           <a
             href="https://www.communitybible.com/"
-            className="text-[#f0453e] hover:text-white"
+            className="text-[#f0453e] hover:text-white hover:animate-pulse"
           >
             www.communitybible.com
           </a>

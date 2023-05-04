@@ -3,7 +3,9 @@ import Footer from "../components/footer/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/home";
 import News from "../pages/news";
-import Admin from "../pages/admin";
+import Error from "../pages/error";
+
+// NOTE: Below is where the pages are being linked to their patthways. You can add more pages here or you can delete pages here as well.
 
 export default function Layout() {
   return (
@@ -13,10 +15,7 @@ export default function Layout() {
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/news" element={<News title="News" />} />
-          <Route
-            path="/admin"
-            element={<Admin title="Administrator Login" />}
-          />
+          <Route path="/*" element={<Error title="Error" />} />
         </Routes>
         <Footer />
       </div>

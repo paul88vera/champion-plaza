@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.981f29da.css",
+    "main.js": "/static/js/main.2ceda983.js",
+    "static/js/787.9b6cf6ac.chunk.js": "/static/js/787.9b6cf6ac.chunk.js",
+    "static/media/ChampionPlaza_HeroBanner_2023.png": "/static/media/ChampionPlaza_HeroBanner_2023.e7aa6f9d78ad8e75f3ee.png",
+    "static/media/CP_Image_05.png": "/static/media/CP_Image_05.4313578f483740661a35.png",
+    "static/media/CP_Image_02.png": "/static/media/CP_Image_02.a3543142248e05bc0a8d.png",
+    "static/media/CP_Image_06.png": "/static/media/CP_Image_06.09d62907e4cfc152c65b.png",
+    "static/media/CP_Image_07.png": "/static/media/CP_Image_07.038d13a89a65d6d19fac.png",
+    "static/media/CP_Image_01.png": "/static/media/CP_Image_01.c123e0efe26b682c12cd.png",
+    "static/media/CP_Image_04.png": "/static/media/CP_Image_04.9185af105da0fae9be9e.png",
+    "static/media/CP_Image_03.png": "/static/media/CP_Image_03.f93e2c2f9bb46a0cf802.png",
+    "static/media/CP_Image_08.png": "/static/media/CP_Image_08.80213d56e789a7d3ef17.png",
+    "index.html": "/index.html",
+    "main.981f29da.css.map": "/static/css/main.981f29da.css.map",
+    "main.2ceda983.js.map": "/static/js/main.2ceda983.js.map",
+    "787.9b6cf6ac.chunk.js.map": "/static/js/787.9b6cf6ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.981f29da.css",
+    "static/js/main.2ceda983.js"
+  ]
+}

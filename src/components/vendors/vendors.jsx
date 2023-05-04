@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+// NOTE: this page is `hidden` on the `home.jsx` page because no vendors are currently obtained. You can `unhide` when necessary on the `home.jsx` page. You will also need to link the new `images` to the correct block as well as the `link`.
+
 export default function Vendors() {
   const vendors = [
     {

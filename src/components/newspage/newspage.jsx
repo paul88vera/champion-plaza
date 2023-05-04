@@ -6,6 +6,7 @@ export default function Newpage() {
   const [currentPost, setCurrentPost] = useState([]);
   const [currentImage, setCurrentImage] = useState([]);
 
+  // NOTE: This is where you can connect a different Google Blogger API
   useEffect(() => {
     const controller = new AbortController();
     const pathwayPromise = fetch(
@@ -51,8 +52,11 @@ export default function Newpage() {
   return (
     <>
       {currentPost ? (
-        <div className="flex bg-colors text-highlight-colors gap-10 md:gap-40 md:justify-start md:pr-10 flex-wrap sm:flex-nowrap md:pb-20 pb-40 pt-20 sm:pt-24">
-          <div className="max-w-7xl relative md:left-24 sm:left-10">
+        <div
+          className="flex bg-colors text-highlight-colors gap-10 md:gap-40 md:justify-start md:pr-10 flex-wrap sm:flex-nowrap md:pb-20 pb-40 pt-20 sm:pt-24 max-w-[2000px] mx-auto w-screen"
+          autoFocus
+        >
+          <div className="max-w-7xl relative left-0 md:left-24">
             <img
               src={currentImage && currentImage[0]}
               alt={currentPost && currentPost.title}
@@ -60,13 +64,13 @@ export default function Newpage() {
             />
           </div>
           <div
-            className="flex content-center flex-col md:max-w-md md:px-5 px-5"
+            className="flex content-center flex-col md:max-w-[500px] mx-auto px-2"
             key={currentPost && currentPost.id}
           >
-            <h1 className="font-bold text-5xl lg:text-6xl pb-5 text-white">
+            <h1 className="font-bold text-5xl lg:text-6xl pb-4 text-white">
               {currentPost && currentPost.title}
             </h1>
-            <div className="pr-4 max-h-[350px] max-w-[500px] overflow-hidden">
+            <div className="max-h-[350px] max-w-[375px] sm:max-w-[400px] mx-auto overflow-hidden">
               {currentPost && currentPost.content}
             </div>
             ...
@@ -74,7 +78,7 @@ export default function Newpage() {
             <br />
             <a
               href={currentPost && currentPost.url}
-              className="border-[#baa294] text-center py-2 px-4 my-2 rounded border-2 hover:bg-[#baa294] hover:text-white font-bold hover:cursor-pointer"
+              className="border-[#baa294] text-center py-2 px-4 my-2 rounded border-2 hover:bg-[#baa294] hover:text-white font-bold hover:cursor-pointer hover:animate-pulse lg:hover:scale-110 transition ease-in-out"
             >
               Read Full Article
             </a>
@@ -98,7 +102,7 @@ export default function Newpage() {
 
       {!recentPost ? null : (
         <>
-          <h1 className="text-black font-bold text-center pt-20 lg:pt-40 pb-24 text-5xl">
+          <h1 className="text-black font-bold text-center pt-20 lg:pt-24 pb-20 text-5xl">
             RECENT{" "}
             <span className="text-highlight-colors font-light">NEWS</span>
           </h1>
@@ -107,17 +111,17 @@ export default function Newpage() {
               return (
                 <a
                   key={item.id}
-                  className="border-2 border-white hover:cursor-pointer hover:border-2 p-4 rounded relative hover:drop-shadow-lg ease-in-out duration-300 lg:hover:scale-110 max-w-[630px] lg:hover:border-zinc-200 lg:hover:bg-zinc-100"
+                  className="border-2 border-transparent hover:cursor-pointer hover:border-2 p-4 rounded relative hover:drop-shadow-lg ease-in-out duration-300 lg:hover:scale-110 sm:max-w-[420px] lg:max-w-[500px] lg:hover:border-zinc-200 lg:hover:bg-zinc-100 mx-auto"
                   href={item.url}
                 >
                   <img src={item.images[0].url} alt={item.title} />
-                  <h3 className="text-highlight-colors text-3xl pt-2 lg:px-0 px-4 font-bold drop-shadow-md">
+                  <h3 className="text-highlight-colors text-3xl pt-2 lg:px-0 py-2 font-bold drop-shadow-md">
                     {item.title}
                   </h3>
                   <p className="max-h-[50px] max-w-[330px] overflow-hidden text-black">
                     {item.content}
                   </p>
-                  <p className="text-[#baa294] font-bold text-right hover:text-black">
+                  <p className="text-[#baa294] font-bold text-right hover:text-black hover:animate-pulse">
                     ...Read More
                   </p>
                   <time className="mx-4 my-2 px-2 text-zinc-400 font-regular border-1 rounded bg-zinc-100 text-center right-2 absolute top-4">
